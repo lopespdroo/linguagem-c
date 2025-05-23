@@ -13,7 +13,12 @@ int multiplicar(int a, int b){
 }
 
 int dividir(int a, int b){
-    return a / b;
+    if (b == 0){
+        printf("Impossível retornar o valor da divisão com quociente 0.");
+    }
+    else{
+        return a / b;
+    }
 }
 
 int main(){
@@ -41,14 +46,8 @@ int main(){
             printf("O resultado da multiplicação é: %d.", multiplicar(numero1, numero2));
             break;
         case 4:
-            if (numero2 == 0){
-                printf("Impossível executar divisão com quociente 0.");
-                break;
-            }
-            else {
-                printf("O resultado da divisão é: %d.", dividir(numero1, numero2));
+            printf("O resultado da divisão é: %d.", multiplicar(numero1, numero2));
             break;
-            }
         default:
             printf("Caractere inesperado. Não foi selecionada nenhuma opção.");
             break;
